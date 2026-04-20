@@ -7,6 +7,7 @@ export default function Pagination(){
     const[page,setPage]= useState(1);
     const[loading,setLoading]=useState(false);
 
+    
     const fetchDetail = async()=>{
          const response = await fetch(`https://api.github.com/users?per_page=15&page=${page}`);
         const data= await response.json();
